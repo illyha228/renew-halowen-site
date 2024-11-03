@@ -1,0 +1,73 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    width: 100vw;
+    height: 150vh;
+    background-color: rgb(65, 65, 65);
+    color: white;
+    overflow-x: hidden;
+}
+
+.menu {
+    width: 100vw;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    background-color: rgb(18, 18, 18);
+}
+
+.menu ul li {
+    margin: 25px 0;
+}
+
+.menu ul li a {
+    text-decoration: none;
+    color: white;
+    animation: blinki 2s infinite;
+}
+
+.menu ul li a:hover {
+    color: orange;
+}
+
+.menu ul li:not(:first-child) {
+    margin-left: 25px;
+}
+
+.sticky-header {
+    position: relative;
+    top: 80px;
+    background-color: #222;
+    padding: 20px 10px;
+    font-size: 24px;
+    color: #ff3700;
+    text-shadow: 2px 2px #000;
+    text-align: left;
+    z-index: 500;
+}
+
+.section, .elixir, .story, .facts {
+    padding: 40px 20px;
+    margin-top: 40px;
+    background-color: #333;
+    color: rgb(255, 185, 55);
+    border-left: 5px solid rgb(255, 209, 25);
+}
+.section{
+    margin-top: 80px;
+}
+
+.section:hover, .elixir:hover, .story:hover, .facts:hover {
+    border-left: 5px solid rgb(255, 25, 25);
+}
+
+@keyframes blinki {
+    0% { color: #ff4800; }
+    50% { color: #d9ff00; }
+    100% { color: #ff6600;}
+}
